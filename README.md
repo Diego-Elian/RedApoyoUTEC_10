@@ -37,7 +37,7 @@ En este caso, el sistema modela distintos tipos de usuarios vinculados al acompa
 | [Sarai Esquiera](https://github.com/saraiesquiera) | Testing / Validación |
 | [Elissa Bonilla](https://github.com/elissa-bonilla) | Implementación de clases |
 
-> La participación individual se puede verificar en el historial de commits del repositorio en GitLab.
+> La participación individual se puede verificar en el historial de commits del repositorio en Github.
 
 ---
 
