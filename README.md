@@ -29,13 +29,13 @@ En este caso, el sistema modela distintos tipos de usuarios vinculados al acompa
 
 ## Participantes
 
-| Nombre completo        | Usuario GitLab         | Roles y Aporte principal        |
-|------------------------|------------------------|-------------------------------- |
-| Diego Piñeyro          | @diegopineyro          | Requerimientos y modelado       |
-| Samuel Dominguez       | @samueldominguez       | Lógica de clases y soporte      |
-| Valentina Vega         | @valentinavega         | Lider del equipo y Coordinación |
-| Sarai Esquiera         | @saraiesquiera         | Testing / Validación            |
-| Elissa Bonilla         | @elissabonilla         | Implementación de clases        |
+| Nombre completo | Roles y Aporte principal |
+|-----------------|---------------------------|
+| [Diego Piñeyro](https://github.com/Diego-Elian) | Requerimientos y modelado |
+| [Samuel Dominguez](https://github.com/SamuelDutec) | Lógica de clases y soporte |
+| [Valentina Vega](https://github.com/ValentinaVega34) | Líder del equipo y Coordinación |
+| [Sarai Esquiera](https://github.com/saraiesquiera) | Testing / Validación |
+| [Elissa Bonilla](https://github.com/elissa-bonilla) | Implementación de clases |
 
 > La participación individual se puede verificar en el historial de commits del repositorio en GitLab.
 
@@ -51,30 +51,15 @@ En este caso, el sistema modela distintos tipos de usuarios vinculados al acompa
 
 ## Clases implementadas
 
-- Usuario.java
-- Estudiante.java
-- Administrador.java
-- Psicopedagogo.java
-- Funcionario.java
-- Analista.java
-
----
-
-## Estructura esperada del repositorio
-
-/CasoEstudioUTEC/
-├── Usuario.java
-├── Estudiante.java
-├── Administrador.java
-├── Psicopedagogo.java
-├── Funcionario.java
-├── Analista.java
-├── README.md
+- `Usuario.java`  
+- `Estudiante.java`  
+- `Administrador.java`  
+- `Psicopedagogo.java`  
+- `Funcionario.java`  
+- `Analista.java`  
 
 ---
 
 ## Notas finales
 
 Cada integrante debe tener una copia local del proyecto para la instancia de defensa. El diseño se realizó con foco en claridad, coherencia y reutilización de código mediante herencia.
-
-
