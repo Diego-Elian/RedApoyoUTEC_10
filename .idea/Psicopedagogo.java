@@ -1,24 +1,25 @@
 package RedApoyo;
 
-// Clase que representa a un estudiante
-public class Estudiante {
-    private String nombreCompleto;
-    private int cedula;
-    private int generacion;
-    private String carrera;
-    private String correo;
-    private String contraseña;
-    private String necesidadEspecifica;
+// Clase Psicopedagogo que hereda de la clase Usuario
+public class Psicopedagogo extends Usuario {
+    private String Especialidad;
 
-    // Constructor que inicializa nombre y generación
-    public Estudiante(String nombreCompleto, int generacion) {
-        this.nombreCompleto = this.nombreCompleto;
-        this.generacion = this.generacion;
+    //Constructor del psicopedagogo
+    public Psicopedagogo(String NombreCompleto, String Correo, String Contrasenia) {
+        super(NombreCompleto, Correo, Contrasenia);
     }
 
-     // Representación en texto del objeto Estudiante
-    @Override
-    public String toString() {
-        return "Estudiante: " + nombreCompleto + ", generacion: " + generacion;
+    //Metodo para establecer la especialidad
+    public void setEspecialidad(String Especialidad) {
+        this.Especialidad = Especialidad;
+    }
+    //Metodo para devolver la especialidad
+    public String getEspecialidad() {
+        return Especialidad;
+    }
+
+    //Metodo para devolver cadena de texto con el nombre, correo y especialidad del psicopedagogo
+    public String ToString(){
+        return "Nombre :" + getNombreCompleto() + ", Correo: " + getCorreo() + ", Especialidad: " + getEspecialidad();
     }
 }
