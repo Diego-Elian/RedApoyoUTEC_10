@@ -21,8 +21,6 @@ public class Psicopedagogo extends Usuario {
             throw new IllegalArgumentException("Especialidad no puede ser nula");
         }
         
-        
-    
  // Metodo para establecer la especialidad
         this.Especialidad = Especialidad;
     }
