@@ -21,10 +21,12 @@ public class Funcionario extends Usuario {
     //Setters y getters para Profesion 
     //Agregación de validación
     public void setProfesion(String profesion){
+
           if (Profesion== null) {
             throw new IllegalArgumentException("Error: Profesión no válida.");
         }
         this.Profesion=profesion;
+    }
         
     public String getProfesion(){
         return Profesion;
