@@ -8,22 +8,31 @@ public class Funcionario extends Usuario {
         super(NombreCompleto,Correo,Contrasenia);
     }
     //Setters y getters para Rol
+    //Agregación de Validación 
     public void setRol(String rol){
+         if (Rol== null) {
+         throw new IllegalArgumentException("Error: Rol no válido.");
+        }
         this.Rol=rol;
     }
     public String getRol(){
         return Rol;
     }
-    //Setters y getters para Profesion
+    //Setters y getters para Profesion 
+    //Agregación de validación
     public void setProfesion(String profesion){
+          if (Profesion== null) {
+            throw new IllegalArgumentException("Error: Profesión no válida.");
+        }
         this.Profesion=profesion;
-    }
+        
     public String getProfesion(){
         return Profesion;
     }
     //Representación en texto del objeto
+        //Corrección de getNombre a getNombreCompleto
      @Override
     public String toString(){
-        return "Nombre:" + getNombre() +", Correo:" + getCorreo()+", Rol:" +getRol() +", Profesion:" + getProfesion();
+        return "Nombre:" + getNombreCompleto() +", Correo:" + getCorreo()+", Rol:" +getRol() +", Profesion:" + getProfesion();
     }
 }
