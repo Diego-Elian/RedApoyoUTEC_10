@@ -7,8 +7,17 @@ public class Estudiante extends Usuario {
     String NecesidadEspecifica;
 
 //Metodo que llama al constructor desde Usuario
-    public Estudiante(String NombreCompleto, String Correo, String Contrasenia) {
-        super(NombreCompleto, Correo, Contrasenia);
+    public Estudiante(String nombreCompleto, String correo, String contrasenia) {
+        if (nombreCompleto == null) {
+            throw new IllegalArgumentException("Error: Rol no válido.");
+        }
+        if (correo == null) {
+            throw new IllegalArgumentException("Error: Rol no válido.");
+        }
+        if (contrasenia == null) {
+            throw new IllegalArgumentException("Error: Rol no válido.");
+        }
+        super(nombreCompleto, correo, contrasenia);
     }
 
     //Metodo seters permite modificar valores
@@ -40,8 +49,8 @@ public class Estudiante extends Usuario {
 }
 
 // Método que devuelve una cadena de texto con los datos del estudiante
-
+@Override
     public String toString() {
-        return "Nombre :" + getNombre() + ", Correo: " + getCorreo() + ", Carrera: " + getCarrera() + ", Generacion: " + getGeneracion() + ", Necesidad Especifica: " + NecesidadEspecifica;
+        return "Nombre :" + getNombreCompleto() + ", Correo: " + getCorreo() + ", Carrera: " + getCarrera() + ", Generacion: " + getGeneracion() + ", Necesidad Especifica: " + NecesidadEspecifica;
 }
 }
