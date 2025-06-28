@@ -3,36 +3,38 @@ public class Administrador extends Usuario {
 
     // Atributo privado que almacena el rol del administrador
     private String Rol;
+
     /**
      * Constructor de la clase Administrador.
      * Valida que ningún parámetro sea null.
      */
-    public Administrador(String nombreCompleto, String correo, String contrasenia, String rol) {
-        super(nombreCompleto, correo, contrasenia);
+    public Administrador(String NombreCompleto, String Correo, String Contrasenia, String Rol) {
+        super(NombreCompleto, Correo, Contrasenia);
 
-        if (nombreCompleto == null) {
+        if (NombreCompleto == null) {
             throw new IllegalArgumentException("El nombre no puede ser nulo");
         }
-        if (correo == null) {
+        if (Correo == null) {
             throw new IllegalArgumentException("El correo no puede ser nulo");
         }
-        if (contrasenia == null) {
-            throw new IllegalArgumentException("La contrasenia no puede ser nula");
+        if (Contrasenia == null) {
+            throw new IllegalArgumentException("La contraseña no puede ser nula");
         }
-        if (rol == null) {
+        if (Rol == null) {
             throw new IllegalArgumentException("El rol no puede ser nulo");
         }
 
+        this.Rol = Rol;
     }
 
     /**
      * Establece el rol del administrador.
      */
-    public void setRol(String rol) {
-        if (rol == null) {
+    public void setRol(String Rol) {
+        if (Rol == null) {
             throw new IllegalArgumentException("El rol no puede ser nulo");
         }
-        this.Rol = rol;
+        this.Rol = Rol;
     }
 
     /**
