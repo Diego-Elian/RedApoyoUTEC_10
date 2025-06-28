@@ -3,13 +3,23 @@ public class Psicopedagogo extends Usuario {
     private String Especialidad;
 
     //Constructor del psicopedagogo
-    //Corrección hecha: se elimina validación redundante porque ya está en Usuario
+    //Corrección hecha:se valida que los parámetros no sean nulos
     public Psicopedagogo(String NombreCompleto, String Correo, String Contrasenia, String Especialidad) {
         super(NombreCompleto, Correo, Contrasenia);
+        if (NombreCompleto == null) {
+            throw new IllegalArgumentException("Nombre no puede ser nulo");
+        }
+        if (Correo == null) {
+            throw new IllegalArgumentException("Correo no puede ser nulo");
+        }
+        if (Contrasenia == null) {
+            throw new IllegalArgumentException("Contraseña no puede ser nula");
+        }
         if (Especialidad == null) {
             throw new IllegalArgumentException("Especialidad no puede ser nula");
         }
-        // Metodo para establecer la especialidad
+        
+ // Metodo para establecer la especialidad
         this.Especialidad = Especialidad;
     }
 
