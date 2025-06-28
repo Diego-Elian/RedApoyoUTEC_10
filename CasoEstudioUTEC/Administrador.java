@@ -1,30 +1,54 @@
 // La clase Administrador hereda de la clase Usuario
 public class Administrador extends Usuario {
-    
+
     // Atributo privado que almacena el rol del administrador
     private String Rol;
+    /**
+     * Constructor de la clase Administrador.
+     * Valida que ningún parámetro sea null.
+     */
+    public Administrador(String nombreCompleto, String correo, String contrasenia, String rol) {
+        super(nombreCompleto, correo, contrasenia);
 
-    // Constructor de la clase Administrador
-    // Llama al constructor de la clase padre Usuario con nombre, correo y contraseña
-    public Administrador(String NombreCompleto, String Correo, String Contrasenia) {
-        super(NombreCompleto, Correo, Contrasenia);
+        if (nombreCompleto == null) {
+            throw new IllegalArgumentException("El nombre no puede ser nulo");
+        }
+        if (correo == null) {
+            throw new IllegalArgumentException("El correo no puede ser nulo");
+        }
+        if (contrasenia == null) {
+            throw new IllegalArgumentException("La contrasenia no puede ser nula");
+        }
+        if (rol == null) {
+            throw new IllegalArgumentException("El rol no puede ser nulo");
+        }
+
     }
 
-    // Método para establecer el valor del rol
-    public void setRol(String Rol) {
-        this.Rol = Rol;
+    /**
+     * Establece el rol del administrador.
+     */
+    public void setRol(String rol) {
+        if (rol == null) {
+            throw new IllegalArgumentException("El rol no puede ser nulo");
+        }
+        this.Rol = rol;
     }
 
-    // Método para obtener el valor del rol
+    /**
+     * Devuelve el rol.
+     */
     public String getRol() {
         return Rol;
     }
 
-    // Método que devuelve una representación en texto del objeto Administrador
-    // Incluye nombre, correo y rol
-    // Corrección hecha: se agrega @Override y se corrige "ToString" a "toString"
+    /**
+     * Representación textual del administrador.
+     */
     @Override
-    public String toString(){
-        return "Nombre :" + getNombreCompleto() + ", Correo: " + getCorreo() + ", Rol: " + getRol();
-    }
+    public String toString() {
+        return "Nombre: " + getNombreCompleto() +
+               ", Correo: " + getCorreo() +
+               ", Rol: " + getRol();
+    }
 }
