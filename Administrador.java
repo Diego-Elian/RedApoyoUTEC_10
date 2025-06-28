@@ -5,13 +5,21 @@ public class Administrador extends Usuario {
     private String Rol;
 
     // Constructor de la clase Administrador
-    // Llama al constructor de la clase padre Usuario con nombre, correo y contraseña
-    public Administrador(String NombreCompleto, String Correo, String Contrasenia) {
+    // Llama al constructor de la clase padre Usuario con nombre, correo y contraseña, y recibe rol
+    public Administrador(String NombreCompleto, String Correo, String Contrasenia, String Rol) {
         super(NombreCompleto, Correo, Contrasenia);
-    }
-
-    // Método para establecer el valor del rol
-    public void setRol(String Rol) {
+        if (NombreCompleto == null) {
+            throw new IllegalArgumentException("El nombre no puede ser nulo");
+        }
+        if (Correo == null) {
+            throw new IllegalArgumentException("El correo no puede ser nulo");
+        }
+        if (Contrasenia == null) {
+            throw new IllegalArgumentException("La contraseña no puede ser nula");
+        }
+        if (Rol == null) {
+            throw new IllegalArgumentException("El rol no puede ser nulo");
+        }
         this.Rol = Rol;
     }
 
@@ -22,7 +30,8 @@ public class Administrador extends Usuario {
 
     // Método que devuelve una representación en texto del objeto Administrador
     // Incluye nombre, correo y rol
-    public String ToString(){
-        return "Nombre :" + getNombre() + ", Correo: " + getCorreo() + ", Rol: " + getRol();
+    @Override
+    public String toString(){
+        return "Nombre :" + getNombreCompleto() + ", Correo: " + getCorreo() + ", Rol: " + getRol();
     }
 }
