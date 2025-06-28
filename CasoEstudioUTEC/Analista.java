@@ -1,9 +1,19 @@
 // Clase Analista , heredada de Usuarios
 public class Analista extends Usuario {
+
     //Metodo que llama al constructor desde Usuario
-    // Corrección hecha: se llama a super() como primera línea, se eliminan validaciones redundantes
-    public Analista(String nombreCompleto, String correo, String contrasenia) {
-        super(nombreCompleto, correo, contrasenia);
+    //Se agrego validacion de constructor
+    public Analista(String NombreCompleto, String Correo, String Contrasenia) {
+        super(NombreCompleto, Correo, Contrasenia);
+        if (NombreCompleto == null) {
+            throw new IllegalArgumentException("Error: Entrada no válida.");
+        }
+        if (Correo == null) {
+            throw new IllegalArgumentException("Error: Entrada no válida.");
+        }
+        if (Contrasenia == null) {
+            throw new IllegalArgumentException("Error: Entrada no válida.");
+        }
     }
     // Método que devuelve una cadena de texto con los datos
     @Override
