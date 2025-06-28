@@ -14,7 +14,7 @@ public class Funcionario extends Usuario {
      if (rol == null) {
     throw new IllegalArgumentException("Error: Rol no válido.");
     }
-      this.Rol = rol;
+      this.Rol = Rol;
     }
     public String getRol(){
         return Rol;
@@ -25,7 +25,7 @@ public class Funcionario extends Usuario {
   if (profesion == null) {
       throw new IllegalArgumentException("Error: Profesión no válida.");
   }
-        this.Profesion = profesion;
+        this.Profesion = Profesion;
     }
 
     public String getProfesion(){
