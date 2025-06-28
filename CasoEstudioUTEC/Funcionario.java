@@ -6,8 +6,6 @@ public class Funcionario extends Usuario {
     //Constructor que llama al de Usuario
     public Funcionario(String NombreCompleto, String Correo, String Contrasenia, String Rol, String Profesion){
         super(NombreCompleto,Correo,Contrasenia);
-        this.Rol=Rol;
-        this.Profesion=Profesion;
 
     }
 
