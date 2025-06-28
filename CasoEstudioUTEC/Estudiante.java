@@ -46,12 +46,13 @@ public class Estudiante extends Usuario {
 
     // Método que devuelve una cadena de texto con los datos del estudiante
     
-   @Override
+ @Override
 public String toString() {
     return "Nombre: " + getNombreCompleto() + "\n" +
            "Correo: " + getCorreo() + "\n" +
            "Carrera: " + getCarrera() + "\n" +
            "Generación: " + getGeneracion() + "\n" +
-           "Necesidad Específica: " + NecesidadEspecifica;
+           "Necesidad Específica: " + getNecesidadEspecifica() + "\n";
 }
+
 }
