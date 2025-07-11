@@ -19,7 +19,7 @@ En este caso, el sistema modela distintos tipos de usuarios vinculados al acompa
 
 ## Supuestos de diseño
 
-- La clase `Usuario` actúa como clase base (padre) y las demás extienden su funcionalidad.
+- La clase `Persona` actúa como clase base (padre) y las demás extienden su funcionalidad.
 - Se asume que cada tipo de usuario tiene roles y accesos diferenciados, reflejados en los atributos y métodos.
 - Los atributos son privados y se accede a ellos mediante getters y setters.
 - La cédula de los usuarios no puede ser modificada una vez creado el objeto.
@@ -51,12 +51,24 @@ En este caso, el sistema modela distintos tipos de usuarios vinculados al acompa
 
 ## Clases implementadas
 
-- `Usuario.java`  
+- `Persona.java`  
 - `Estudiante.java`  
 - `Administrador.java`  
 - `Psicopedagogo.java`  
 - `Funcionario.java`  
-- `Analista.java`  
+- `Analista.java`
+- `CarnetDeSalud.java`
+- `ITR.java`
+- `Recordatorio.java`
+- `Rol.java`
+- `Incidencia.java`
+- `Notificacion.java`
+- `Auditoria.java`
+- `HistorialDeCambios.java`
+- `Reporte.java`
+- `Instancia.java`
+- `DocumentoAdjunto.java`
+- `Funcionalidad.java`
 
 ---
 
